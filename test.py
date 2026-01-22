@@ -4,6 +4,7 @@ import json
 def call_qianwen_api(text):
     # 千问API调用参数（示例，需替换为你的实际参数）
     url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation"
+    #url = "https://dashscope.aliyuncs.com/compatible-mode/v1"
     headers = {
         "Authorization": "Bearer <sk-c9a4649744f246f0877675c62ec3b9f1>",
         "Content-Type": "application/json"
