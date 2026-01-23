@@ -3,14 +3,19 @@ import requests
 import json
 import re
 from typing import List, Dict, Any
+from tools_call_qianwen import call_qianwen_api_via_requests
 
 # ===================== 配置项 =====================
 # 替换为你的通义千问API Key（获取地址：https://dashscope.aliyun.com/）
 QWEN_API_KEY = "sk-c9a4649744f246f0877675c62ec3b9f1"
 # 小说文本路径（推荐使用绝对路径，例如 "/Users/apple/Dev/Code/novel_10k.txt"）
-NOVEL_TXT_PATH = "/Users/apple/Dev/Code/generate_voice_by_llm/novel_10k.txt"  # 修改为你的实际文件路径
+# NOVEL_TXT_PATH = "/Users/apple/Dev/Code/generate_voice_by_llm/novel_10k.txt"  # mac电脑的环境
+NOVEL_TXT_PATH = r"D:\code\generate_voice_by_llm\novel_10k.txt"  # window电脑的环境
+
 # 输出角色档案的JSON路径
 OUTPUT_JSON_PATH = "./novel_roles.json"
+
+MODEL_NAME = "qwen-turbo"  # 或 'qwen-plus', 'qwen-max' 等
 
 # ===================== 核心函数 =====================
 def read_novel_text(file_path: str, encoding: str = "utf-8") -> str:
@@ -51,33 +56,33 @@ def split_long_text(text: str, chunk_size: int = 2000) -> List[str]:
         start = end
     return chunks
 
-def call_qwen_api(prompt: str, api_key: str) -> str:
-    """调用通义千问API（qwen-turbo，适配长文本解析）"""
-    url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation"
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json"
-    }
-    payload = {
-        "model": "qwen-turbo",  # 轻量版，速度快，支持8k上下文
-        "input": {
-            "messages": [
-                {"role": "user", "content": prompt}
-            ]
-        },
-        "parameters": {
-            "temperature": 0.1,  # 降低随机性，保证输出格式稳定
-            "top_p": 0.9,
-            "result_format": "text"
-        }
-    }
-    try:
-        response = requests.post(url, headers=headers, json=payload, timeout=60)
-        response.raise_for_status()
-        result = response.json()
-        return result["output"]["choices"][0]["message"]["content"]
-    except Exception as e:
-        raise Exception(f"调用千问API失败：{str(e)}")
+# def call_qwen_api(prompt: str, api_key: str) -> str:
+#     """调用通义千问API（qwen-turbo，适配长文本解析）"""
+#     url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation"
+#     headers = {
+#         "Authorization": f"Bearer {api_key}",
+#         "Content-Type": "application/json"
+#     }
+#     payload = {
+#         "model": "qwen-turbo",  # 轻量版，速度快，支持8k上下文
+#         "input": {
+#             "messages": [
+#                 {"role": "user", "content": prompt}
+#             ]
+#         },
+#         "parameters": {
+#             "temperature": 0.1,  # 降低随机性，保证输出格式稳定
+#             "top_p": 0.9,
+#             "result_format": "text"
+#         }
+#     }
+#     try:
+#         response = requests.post(url, headers=headers, json=payload, timeout=60)
+#         response.raise_for_status()
+#         result = response.json()
+#         return result["output"]["choices"][0]["message"]["content"]
+#     except Exception as e:
+#         raise Exception(f"调用千问API失败：{str(e)}")
 
 def extract_roles_from_chunk(chunk_text: str, api_key: str) -> List[Dict[str, Any]]:
     """从单段文本中提取角色信息"""
@@ -110,7 +115,7 @@ def extract_roles_from_chunk(chunk_text: str, api_key: str) -> List[Dict[str, An
     {chunk_text}
     """
     # 调用API
-    raw_output = call_qwen_api(prompt, api_key)
+    raw_output = call_qianwen_api_via_requests(QWEN_API_KEY, MODEL_NAME, prompt)
     # 清洗输出（去除可能的markdown代码块、多余文字）
     raw_output = raw_output.strip().replace("```json", "").replace("```", "").replace("\\n", "")
     # 解析JSON
