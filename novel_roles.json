@@ -1,0 +1,1573 @@
+{
+    "roles": [
+        {
+            "name": "丁大队",
+            "gender": "男",
+            "age": "未知",
+            "personality": "未知",
+            "voice_style": "沉稳男声",
+            "description": "江阳刑侦负责人，案件破获后将参与聚餐"
+        },
+        {
+            "name": "丁浩",
+            "gender": "男",
+            "age": "未知",
+            "personality": "冷静、专业、果断",
+            "voice_style": "沉稳男声",
+            "description": "江阳区刑警大队长，负责调查案件，分析案情"
+        },
+        {
+            "name": "三轮车主人",
+            "gender": "男",
+            "age": "未知",
+            "personality": "谨慎、有点防备心、后来变得配合",
+            "voice_style": "普通男声",
+            "description": "未知"
+        },
+        {
+            "name": "严峰",
+            "gender": "男",
+            "age": "未知",
+            "personality": "尽职、严谨",
+            "voice_style": "沉稳男声",
+            "description": "警察，与谭大国一起搜索现场"
+        },
+        {
+            "name": "中年女人",
+            "gender": "女",
+            "age": "未知",
+            "personality": "愤怒、凶狠",
+            "voice_style": "尖锐女声",
+            "description": "许家成员，持擀面杖攻击杜耀"
+        },
+        {
+            "name": "中年女收费员",
+            "gender": "女",
+            "age": "未知",
+            "personality": "泼辣、直率",
+            "voice_style": "活力女声",
+            "description": "收停车费，被许大光辱骂"
+        },
+        {
+            "name": "中年妇女",
+            "gender": "女",
+            "age": "未知",
+            "personality": "诚实、直率",
+            "voice_style": "普通女声",
+            "description": "提供关键线索的环卫工人"
+        },
+        {
+            "name": "乔亚楠",
+            "gender": "女",
+            "age": "未知",
+            "personality": "温柔、优雅",
+            "voice_style": "柔和女声",
+            "description": "夏晓宇的伴侣，气质高雅，带着一岁多的儿子上香"
+        },
+        {
+            "name": "伍强",
+            "gender": "男",
+            "age": "未知",
+            "personality": "尽职、可靠",
+            "voice_style": "沉稳男声",
+            "description": "布置警戒带，协助维持秩序"
+        },
+        {
+            "name": "何勇",
+            "gender": "男",
+            "age": "未知",
+            "personality": "专业、敬业",
+            "voice_style": "低沉男声",
+            "description": "二中队民警，参与团年饭"
+        },
+        {
+            "name": "侯国龙",
+            "gender": "男",
+            "age": "未知",
+            "personality": "温和、慈祥",
+            "voice_style": "低沉男声",
+            "description": "未知"
+        },
+        {
+            "name": "侯大利",
+            "gender": "男",
+            "age": "30",
+            "personality": "执着、冷静、敏锐",
+            "voice_style": "低沉男声",
+            "description": "江州市刑警支队重案大队一组组长，刑侦专家，对案件有极强的洞察力"
+        },
+        {
+            "name": "保卫科长",
+            "gender": "男",
+            "age": "未知",
+            "personality": "无奈、严肃",
+            "voice_style": "沉稳男声",
+            "description": "负责学校安全的管理人员，对案件感到意外和沮丧"
+        },
+        {
+            "name": "关鹏",
+            "gender": "男",
+            "age": "未知",
+            "personality": "关心下属、重情义",
+            "voice_style": "沉稳男声",
+            "description": "局长，即将外出考察，邀请朱林吃饭"
+        },
+        {
+            "name": "刘战刚",
+            "gender": "男",
+            "age": "未知",
+            "personality": "谨慎、务实",
+            "voice_style": "沉稳男声",
+            "description": "退居二线的副局长，参与案件讨论"
+        },
+        {
+            "name": "刘清秀",
+            "gender": "女",
+            "age": "未知",
+            "personality": "悲痛、情绪化",
+            "voice_style": "悲伤女声",
+            "description": "许海的母亲，在派出所哭诉儿子之死"
+        },
+        {
+            "name": "刘真",
+            "gender": "男",
+            "age": "未知",
+            "personality": "权威、严肃",
+            "voice_style": "沉稳男声",
+            "description": "省公安厅工作组副总队长"
+        },
+        {
+            "name": "办案民警",
+            "gender": "男",
+            "age": "未知",
+            "personality": "谨慎、执行任务",
+            "voice_style": "普通男声",
+            "description": "协助侯大利调查案件的刑警"
+        },
+        {
+            "name": "卓佳",
+            "gender": "女",
+            "age": "未知",
+            "personality": "受害、无助",
+            "voice_style": "软糯女声",
+            "description": "许海早期的受害者之一"
+        },
+        {
+            "name": "卓佳奶奶",
+            "gender": "女",
+            "age": "七十来岁",
+            "personality": "乐观、热情",
+            "voice_style": "温暖女声",
+            "description": "卓家的老人，听到许海死讯后非常高兴，准备做菜庆祝。"
+        },
+        {
+            "name": "卓佳爷爷",
+            "gender": "男",
+            "age": "未知",
+            "personality": "年长，与妻子同住",
+            "voice_style": "低沉男声",
+            "description": "未知"
+        },
+        {
+            "name": "卓佳的外公",
+            "gender": "男",
+            "age": "未知",
+            "personality": "未知",
+            "voice_style": "未知",
+            "description": "不在本地，无作案可能"
+        },
+        {
+            "name": "卓佳的外婆",
+            "gender": "女",
+            "age": "未知",
+            "personality": "未知",
+            "voice_style": "未知",
+            "description": "不在本地，无作案可能"
+        },
+        {
+            "name": "卓佳的爷爷",
+            "gender": "男",
+            "age": "76",
+            "personality": "未知",
+            "voice_style": "未知",
+            "description": "有不在场证明，无作案时间"
+        },
+        {
+            "name": "卓越",
+            "gender": "男",
+            "age": "未知",
+            "personality": "谨慎、理性、有防御性",
+            "voice_style": "沉稳男声",
+            "description": "卓家的丈夫，许海的邻居，提供不在场证明并表达对女儿的保护意愿。"
+        },
+        {
+            "name": "吴新生",
+            "gender": "男",
+            "age": "未知",
+            "personality": "体贴、温柔",
+            "voice_style": "温和男声",
+            "description": "朱琪的男友，开车接她并表现出关心"
+        },
+        {
+            "name": "吴炯",
+            "gender": "男",
+            "age": "未知",
+            "personality": "简洁、专业",
+            "voice_style": "低沉男声",
+            "description": "理化检验室主任，提供毒物检测结果"
+        },
+        {
+            "name": "吴青",
+            "gender": "男",
+            "age": "未知",
+            "personality": "务实、克制",
+            "voice_style": "沉稳男声",
+            "description": "长青县刑警大队副大队长，接待侯大利和王华"
+        },
+        {
+            "name": "周向阳",
+            "gender": "男",
+            "age": "未知",
+            "personality": "合作、果断",
+            "voice_style": "普通男声",
+            "description": "与侯大利合作的警察"
+        },
+        {
+            "name": "周涛",
+            "gender": "男",
+            "age": "未知",
+            "personality": "随和、幽默",
+            "voice_style": "活力男声",
+            "description": "105专案组成员，参与金江寺执勤"
+        },
+        {
+            "name": "夏晓宇",
+            "gender": "男",
+            "age": "未知",
+            "personality": "从容、有城府",
+            "voice_style": "沉稳男声",
+            "description": "与乔亚楠一同上香的人，与侯大利有复杂关系"
+        },
+        {
+            "name": "女子（技师）",
+            "gender": "女",
+            "age": "未知",
+            "personality": "镇定、坦率",
+            "voice_style": "温和女声",
+            "description": "洗浴中心技师，接受询问并提供卓越的行踪信息。"
+        },
+        {
+            "name": "宁凌",
+            "gender": "女",
+            "age": "未知",
+            "personality": "细心、体贴",
+            "voice_style": "软糯女声",
+            "description": "陪伴李永梅的人，被安排照顾侯大利"
+        },
+        {
+            "name": "宫建民",
+            "gender": "男",
+            "age": "未知",
+            "personality": "老练、果断",
+            "voice_style": "低沉男声",
+            "description": "局长，支持侯大利调查杨帆案"
+        },
+        {
+            "name": "宾格",
+            "gender": "未知",
+            "age": "未知",
+            "personality": "灵敏、忠诚",
+            "voice_style": "动物声音（非人类）",
+            "description": "血迹搜索警犬，协助寻找微量血迹"
+        },
+        {
+            "name": "封长胜",
+            "gender": "男",
+            "age": "未知",
+            "personality": "焦虑、诚恳",
+            "voice_style": "沉稳男声",
+            "description": "长青县刑警大队大队长，请求侯大利协助破案"
+        },
+        {
+            "name": "小林",
+            "gender": "男",
+            "age": "未知",
+            "personality": "配合、执行能力强",
+            "voice_style": "沉稳男声",
+            "description": "工作指导组成员之一"
+        },
+        {
+            "name": "小男孩",
+            "gender": "男",
+            "age": "1",
+            "personality": "活泼、天真",
+            "voice_style": "软糯男童",
+            "description": "乔亚楠和夏晓宇的儿子，与侯大利有短暂互动"
+        },
+        {
+            "name": "小舒",
+            "gender": "女",
+            "age": "未知",
+            "personality": "未知",
+            "voice_style": "未知",
+            "description": "与汪建国等人一同行动的人，具体信息未详细描述"
+        },
+        {
+            "name": "少年人",
+            "gender": "男",
+            "age": "15",
+            "personality": "调皮、冲动、缺乏经验",
+            "voice_style": "年轻男声",
+            "description": "涉嫌多起盗窃和杀人案的未成年犯罪嫌疑人"
+        },
+        {
+            "name": "居委会主任",
+            "gender": "女",
+            "age": "40-50",
+            "personality": "精明、能干",
+            "voice_style": "沉稳女声",
+            "description": "提供关键信息，了解社区情况"
+        },
+        {
+            "name": "市局领导",
+            "gender": "男",
+            "age": "未知",
+            "personality": "为难、权谋",
+            "voice_style": "沉稳男声",
+            "description": "教育局领导，试图协调许海问题"
+        },
+        {
+            "name": "年轻女子",
+            "gender": "女",
+            "age": "30-40",
+            "personality": "正义感强、警惕",
+            "voice_style": "活力女声",
+            "description": "提醒许海注意摩托车，对他的行为感到不满"
+        },
+        {
+            "name": "张佳洪",
+            "gender": "男",
+            "age": "2001年时17岁",
+            "personality": "未知",
+            "voice_style": "未知",
+            "description": "嫌疑人之一，父亲早期涉足商场和宾馆经营"
+        },
+        {
+            "name": "张勤",
+            "gender": "女",
+            "age": "未知",
+            "personality": "悲痛、焦虑",
+            "voice_style": "柔和女声",
+            "description": "汪欣桐的母亲，与丈夫一同赶回江州"
+        },
+        {
+            "name": "张国强",
+            "gender": "男",
+            "age": "未知",
+            "personality": "感激、守规矩",
+            "voice_style": "沉稳男声",
+            "description": "探长，外地人，春节期间父亲生日，被侯大利替班"
+        },
+        {
+            "name": "张小伙",
+            "gender": "男",
+            "age": "未知",
+            "personality": "不知情",
+            "voice_style": "普通男声",
+            "description": "未知"
+        },
+        {
+            "name": "张小天",
+            "gender": "女",
+            "age": "未知",
+            "personality": "干练、自信、果断",
+            "voice_style": "活力女声",
+            "description": "刑警，与侯大利有工作联系，性格利索"
+        },
+        {
+            "name": "张小舒",
+            "gender": "女",
+            "age": "未知",
+            "personality": "温婉、优雅、内敛",
+            "voice_style": "软糯女声",
+            "description": "张小天的堂妹，参加聚会，气质柔美，唱歌表现大方"
+        },
+        {
+            "name": "张晨",
+            "gender": "男",
+            "age": "未知",
+            "personality": "专业、严谨",
+            "voice_style": "沉稳男声",
+            "description": "DNA室工作人员，负责比对样本"
+        },
+        {
+            "name": "张红",
+            "gender": "女",
+            "age": "未知",
+            "personality": "爱聊天、熟悉许大光",
+            "voice_style": "温和女声",
+            "description": "家政人员，认识许大光，可能提供线索"
+        },
+        {
+            "name": "情侣",
+            "gender": "女",
+            "age": "未知",
+            "personality": "胆小、紧张",
+            "voice_style": "软糯女声",
+            "description": "在大象坡遇到头颅的女生，被吓到"
+        },
+        {
+            "name": "成红梅",
+            "gender": "女",
+            "age": "未知",
+            "personality": "直率、关心家人",
+            "voice_style": "温和女声",
+            "description": "朱林的妻子，做饭并提醒大家不要谈论血腥话题"
+        },
+        {
+            "name": "戴帽男子",
+            "gender": "男",
+            "age": "未知",
+            "personality": "阴险、观察力强",
+            "voice_style": "低沉男声",
+            "description": "跟踪许海的人，记录其行踪"
+        },
+        {
+            "name": "所长",
+            "gender": "男",
+            "age": "未知",
+            "personality": "谨慎、务实",
+            "voice_style": "普通男声",
+            "description": "秦阳当地刑警大队负责人"
+        },
+        {
+            "name": "接待人员",
+            "gender": "未知",
+            "age": "未知",
+            "personality": "谨慎、势利",
+            "voice_style": "普通男声",
+            "description": "未知"
+        },
+        {
+            "name": "摩托车手",
+            "gender": "男",
+            "age": "未知",
+            "personality": "暴躁、不讲理",
+            "voice_style": "粗犷男声",
+            "description": "在道路上挑衅越野车，言语激烈"
+        },
+        {
+            "name": "易思华",
+            "gender": "男",
+            "age": "未知",
+            "personality": "好奇、敬业",
+            "voice_style": "活力男声",
+            "description": "刑警支队成员，为朱林拍照"
+        },
+        {
+            "name": "普阳",
+            "gender": "男",
+            "age": "未知",
+            "personality": "愤怒、认真、无奈",
+            "voice_style": "严肃男声",
+            "description": "副大队长，负责审问许海，对案件感到愤怒"
+        },
+        {
+            "name": "朱朱",
+            "gender": "女",
+            "age": "未知",
+            "personality": "安静、才华横溢",
+            "voice_style": "软糯女声",
+            "description": "在酒店弹钢琴的姑娘"
+        },
+        {
+            "name": "朱林",
+            "gender": "男",
+            "age": "未知",
+            "personality": "沉稳、经验丰富",
+            "voice_style": "沉稳男声",
+            "description": "105专案组副组长，侯大利的师父，具有丰富的刑侦经验"
+        },
+        {
+            "name": "朱燕",
+            "gender": "女",
+            "age": "未知",
+            "personality": "谨慎、保守",
+            "voice_style": "沉稳女声",
+            "description": "陈菲菲的母亲，经营菜摊"
+        },
+        {
+            "name": "朱燕的父母",
+            "gender": "未知",
+            "age": "未知",
+            "personality": "未知",
+            "voice_style": "未知",
+            "description": "案发时在城外"
+        },
+        {
+            "name": "朱琪",
+            "gender": "女",
+            "age": "未知",
+            "personality": "精致、自信、冷漠",
+            "voice_style": "沉稳女声",
+            "description": "矿业大厦老板娘，购物后等待男友，对许海的注视表现出不悦"
+        },
+        {
+            "name": "李主任",
+            "gender": "男",
+            "age": "未知",
+            "personality": "专业、严谨",
+            "voice_style": "沉稳男声",
+            "description": "法医室负责人，参与尸块鉴定工作。"
+        },
+        {
+            "name": "李友青",
+            "gender": "女",
+            "age": "未知",
+            "personality": "未知",
+            "voice_style": "未知",
+            "description": "因吴煜案被捕，失去几百万财产"
+        },
+        {
+            "name": "李小峰",
+            "gender": "男",
+            "age": "2001年时17岁",
+            "personality": "未知",
+            "voice_style": "未知",
+            "description": "嫌疑人之一，父亲是路桥公司老板"
+        },
+        {
+            "name": "李明",
+            "gender": "男",
+            "age": "未知",
+            "personality": "理性、务实",
+            "voice_style": "沉稳男声",
+            "description": "重案三组组长，支持案件分配公平"
+        },
+        {
+            "name": "李晖",
+            "gender": "女",
+            "age": "未知",
+            "personality": "热情、可靠",
+            "voice_style": "温柔女声",
+            "description": "金色火锅馆老板，为警方提供用餐场所"
+        },
+        {
+            "name": "李永梅",
+            "gender": "女",
+            "age": "50",
+            "personality": "慈爱、感性、忧伤",
+            "voice_style": "温柔女声",
+            "description": "侯大利的母亲，关心儿子，内心有苦衷"
+        },
+        {
+            "name": "李琴",
+            "gender": "女",
+            "age": "未知",
+            "personality": "勤劳、低调",
+            "voice_style": "沉稳女声",
+            "description": "在厨房帮忙的年轻人"
+        },
+        {
+            "name": "李秋",
+            "gender": "男",
+            "age": "未知",
+            "personality": "直率、可靠",
+            "voice_style": "活力男声",
+            "description": "侯大利的朋友，曾被冒充声音邀请到江州"
+        },
+        {
+            "name": "李超",
+            "gender": "男",
+            "age": "未知",
+            "personality": "未知",
+            "voice_style": "低沉男声",
+            "description": "已故刑警，胡秀的丈夫，团年饭中被纪念"
+        },
+        {
+            "name": "李阳",
+            "gender": "男",
+            "age": "未知",
+            "personality": "专业、有条理",
+            "voice_style": "沉稳男声",
+            "description": "三组成员，汇报报复杀人案进展"
+        },
+        {
+            "name": "杜家贵",
+            "gender": "男",
+            "age": "未知",
+            "personality": "有失眠史",
+            "voice_style": "沉稳男声",
+            "description": "未知"
+        },
+        {
+            "name": "杜峰",
+            "gender": "男",
+            "age": "未知",
+            "personality": "尽责、果断",
+            "voice_style": "沉稳男声",
+            "description": "警察，和钱刚前往许海家中调查"
+        },
+        {
+            "name": "杜文丽",
+            "gender": "女",
+            "age": "未知",
+            "personality": "神秘、友好",
+            "voice_style": "普通女声",
+            "description": "朱朱的朋友，曾偶尔唱歌"
+        },
+        {
+            "name": "杜耀",
+            "gender": "男",
+            "age": "未知",
+            "personality": "愤怒、果断、保护欲强",
+            "voice_style": "低沉男声",
+            "description": "杨杜丹丹的父亲，得知女儿遭遇后准备找许海报复"
+        },
+        {
+            "name": "杨主任",
+            "gender": "男",
+            "age": "未知",
+            "personality": "严肃、负责",
+            "voice_style": "沉稳男声",
+            "description": "信访办负责人，通报情况"
+        },
+        {
+            "name": "杨国雄",
+            "gender": "男",
+            "age": "未知",
+            "personality": "未知",
+            "voice_style": "普通男声",
+            "description": "未知"
+        },
+        {
+            "name": "杨帆",
+            "gender": "女",
+            "age": "26",
+            "personality": "未知",
+            "voice_style": "温柔女声",
+            "description": "侯大利的前女友，因命案身亡"
+        },
+        {
+            "name": "杨智",
+            "gender": "男",
+            "age": "未知",
+            "personality": "理智、关心家人",
+            "voice_style": "温和男声",
+            "description": "杜耀的丈夫，正在国外比赛，得知消息后准备回国"
+        },
+        {
+            "name": "杨智的父母",
+            "gender": "未知",
+            "age": "未知",
+            "personality": "未知",
+            "voice_style": "未知",
+            "description": "案发时不在江州"
+        },
+        {
+            "name": "杨杜丹丹",
+            "gender": "女",
+            "age": "12",
+            "personality": "勇敢、坚强、机智",
+            "voice_style": "活力女声",
+            "description": "实验小学学生，被许海侵犯后奋力反抗并成功逃脱"
+        },
+        {
+            "name": "杨杜丹丹的外公",
+            "gender": "男",
+            "age": "未知",
+            "personality": "虚弱、体弱",
+            "voice_style": "虚弱男声",
+            "description": "身体状况不佳，无作案可能"
+        },
+        {
+            "name": "杨永福",
+            "gender": "男",
+            "age": "2001年时17岁",
+            "personality": "偏激、狠厉",
+            "voice_style": "低沉男声",
+            "description": "嫌疑人之一，父亲因生意失败自杀，下落不明"
+        },
+        {
+            "name": "杨浩",
+            "gender": "男",
+            "age": "未知",
+            "personality": "严格、专业",
+            "voice_style": "沉稳男声",
+            "description": "山南省公安厅法医病理损伤检验科主任法医师"
+        },
+        {
+            "name": "杨英",
+            "gender": "女",
+            "age": "未知",
+            "personality": "严肃、有责任感",
+            "voice_style": "沉稳女声",
+            "description": "政委，主持会议并回顾朱林的从警经历"
+        },
+        {
+            "name": "林海军",
+            "gender": "男",
+            "age": "未知",
+            "personality": "谦逊、反思、幽默",
+            "voice_style": "低沉男声",
+            "description": "即将回总队的刑警，对侯大利和张小天的能力表示认可"
+        },
+        {
+            "name": "林红",
+            "gender": "女",
+            "age": "未知",
+            "personality": "优雅、从容",
+            "voice_style": "温柔女声",
+            "description": "洗浴中心的女子，接待侯大利等人，提供信息。"
+        },
+        {
+            "name": "林风",
+            "gender": "男",
+            "age": "未知",
+            "personality": "专业、自信、有才华",
+            "voice_style": "低沉男声",
+            "description": "音乐老师，在演出中演唱，水平较高"
+        },
+        {
+            "name": "柳江河",
+            "gender": "男",
+            "age": "未知",
+            "personality": "严谨、细致",
+            "voice_style": "沉稳男声",
+            "description": "常务副局长，负责春节安保工作，心思缜密"
+        },
+        {
+            "name": "梁艳",
+            "gender": "女",
+            "age": "未知",
+            "personality": "谨慎、低调",
+            "voice_style": "沉稳女声",
+            "description": "与蒋帆有联系，手机定位异常"
+        },
+        {
+            "name": "樊勇",
+            "gender": "男",
+            "age": "未知",
+            "personality": "严肃、专业、自信",
+            "voice_style": "低沉男声",
+            "description": "特警支队教官，曾是105专案组成员，以勇武闻名，擅长擒拿格斗。"
+        },
+        {
+            "name": "欣桐",
+            "gender": "女",
+            "age": "未知",
+            "personality": "脆弱、受创",
+            "voice_style": "软糯女童",
+            "description": "汪建国的女儿，被许海强奸，心理和身体受到严重伤害"
+        },
+        {
+            "name": "段家秀",
+            "gender": "女",
+            "age": "70",
+            "personality": "护孙、情绪化",
+            "voice_style": "温和女声",
+            "description": "许海的奶奶，陪同孙子接受调查"
+        },
+        {
+            "name": "江克扬",
+            "gender": "男",
+            "age": "未知",
+            "personality": "细心、敏锐",
+            "voice_style": "沉稳男声",
+            "description": "负责观察香客，具备识别逃犯的能力"
+        },
+        {
+            "name": "江克杨",
+            "gender": "男",
+            "age": "未知",
+            "personality": "专业、冷静",
+            "voice_style": "沉稳男声",
+            "description": "侯大利的搭档，一同调查案件。"
+        },
+        {
+            "name": "江站长",
+            "gender": "男",
+            "age": "未知",
+            "personality": "热情、有组织能力",
+            "voice_style": "沉稳男声",
+            "description": "未知"
+        },
+        {
+            "name": "江阳区副区长",
+            "gender": "男",
+            "age": "未知",
+            "personality": "务实、谨慎",
+            "voice_style": "沉稳男声",
+            "description": "了解许大光家族情况"
+        },
+        {
+            "name": "汤柳",
+            "gender": "女",
+            "age": "未知",
+            "personality": "专业、敬业",
+            "voice_style": "沉稳女声",
+            "description": "法医，接到通知后迅速赶到现场"
+        },
+        {
+            "name": "汪建国",
+            "gender": "男",
+            "age": "未知",
+            "personality": "悲痛、焦虑",
+            "voice_style": "低沉男声",
+            "description": "汪欣桐的父亲，从广州赶回江州，极度伤心"
+        },
+        {
+            "name": "汪欣桐",
+            "gender": "女",
+            "age": "未知",
+            "personality": "胆小、冷静",
+            "voice_style": "软糯女声",
+            "description": "高三学生，因解题晚走，遭遇袭击，性格内向"
+        },
+        {
+            "name": "汪远铭",
+            "gender": "男",
+            "age": "82",
+            "personality": "固执、关心孙女",
+            "voice_style": "沉稳男声",
+            "description": "汪欣桐的爷爷，退休数学教授"
+        },
+        {
+            "name": "洪金明",
+            "gender": "男",
+            "age": "未知",
+            "personality": "严肃、专业",
+            "voice_style": "沉稳男声",
+            "description": "刑警支队政委，参与碎尸案分析会议"
+        },
+        {
+            "name": "涂山",
+            "gender": "男",
+            "age": "未知",
+            "personality": "谨慎、圆滑",
+            "voice_style": "温和男声",
+            "description": "杨智的老同学，被询问案件信息"
+        },
+        {
+            "name": "滕鹏飞",
+            "gender": "男",
+            "age": "未知",
+            "personality": "直率、谨慎",
+            "voice_style": "沉稳男声",
+            "description": "重案大队大队长，对案件安排提出异议"
+        },
+        {
+            "name": "滕麻子",
+            "gender": "男",
+            "age": "未知",
+            "personality": "未知",
+            "voice_style": "低沉男声",
+            "description": "被王华设想为可能的行为人"
+        },
+        {
+            "name": "物管人员",
+            "gender": "男",
+            "age": "未知",
+            "personality": "客观、中立",
+            "voice_style": "普通男声",
+            "description": "提供小区信息的物业管理人员"
+        },
+        {
+            "name": "王刚",
+            "gender": "男",
+            "age": "未知",
+            "personality": "未知",
+            "voice_style": "普通男声",
+            "description": "杜耀提到的朋友，曾打电话告知杨智看到许海的地点。"
+        },
+        {
+            "name": "王华",
+            "gender": "男",
+            "age": "未知",
+            "personality": "直率",
+            "voice_style": "低沉男声",
+            "description": "刑警支队成员，看到朱林穿警服感到惊讶"
+        },
+        {
+            "name": "王永强",
+            "gender": "男",
+            "age": "未知",
+            "personality": "坦诚、直率、谨慎",
+            "voice_style": "低沉男声",
+            "description": "提供线索的证人，与金传统认识"
+        },
+        {
+            "name": "王芳",
+            "gender": "女",
+            "age": "未知",
+            "personality": "愤怒、不满",
+            "voice_style": "激昂女声",
+            "description": "卓家女主人，对许海的行为表示强烈不满"
+        },
+        {
+            "name": "田甜",
+            "gender": "女",
+            "age": "未知",
+            "personality": "勇敢、善良",
+            "voice_style": "温柔女声",
+            "description": "侯大利的未婚妻，因命案牺牲"
+        },
+        {
+            "name": "男友",
+            "gender": "男",
+            "age": "未知",
+            "personality": "大胆、好奇",
+            "voice_style": "活力男声",
+            "description": "情侣中的男生，拍下头颅照片"
+        },
+        {
+            "name": "秦勇",
+            "gender": "男",
+            "age": "2001年时16岁",
+            "personality": "未知",
+            "voice_style": "普通男声",
+            "description": "嫌疑人之一，由伯父养大，现经营矿山"
+        },
+        {
+            "name": "秦风",
+            "gender": "男",
+            "age": "未知",
+            "personality": "热情、冲动、勇敢",
+            "voice_style": "活力男声",
+            "description": "篮球队长，追求张小舒，参与抗议并卷入冲突"
+        },
+        {
+            "name": "管理员",
+            "gender": "未知",
+            "age": "未知",
+            "personality": "尽职、客观",
+            "voice_style": "中性男声",
+            "description": "实验室管理人员，提供实验记录和视频信息"
+        },
+        {
+            "name": "罗志刚",
+            "gender": "未知",
+            "age": "未知",
+            "personality": "未知",
+            "voice_style": "未知",
+            "description": "警察，提供线索，与梁艳进行询问"
+        },
+        {
+            "name": "老伍",
+            "gender": "男",
+            "age": "未知",
+            "personality": "谨慎、有力",
+            "voice_style": "低沉男声",
+            "description": "参与抓捕行动的警察，控制高个子左手，动作有力"
+        },
+        {
+            "name": "老公安",
+            "gender": "男",
+            "age": "未知",
+            "personality": "经验丰富、谨慎",
+            "voice_style": "低沉男声",
+            "description": "临近退休的本地老警察"
+        },
+        {
+            "name": "老姜局长",
+            "gender": "男",
+            "age": "73",
+            "personality": "果断、经验丰富",
+            "voice_style": "沉稳男声",
+            "description": "退休副局长，参与案件分析，体力好且不服老"
+        },
+        {
+            "name": "老张",
+            "gender": "男",
+            "age": "未知",
+            "personality": "爽快、可靠、热情",
+            "voice_style": "低沉男声",
+            "description": "未知"
+        },
+        {
+            "name": "老朴",
+            "gender": "男",
+            "age": "未知",
+            "personality": "经验丰富、幽默",
+            "voice_style": "低沉男声",
+            "description": "经验丰富的侦查员，与侯大利关系密切"
+        },
+        {
+            "name": "老蒋",
+            "gender": "男",
+            "age": "未知",
+            "personality": "谨慎、务实",
+            "voice_style": "沉稳男声",
+            "description": "指挥中心工作人员，提供警力分配信息"
+        },
+        {
+            "name": "老谭",
+            "gender": "男",
+            "age": "未知",
+            "personality": "专业、经验丰富",
+            "voice_style": "沉稳男声",
+            "description": "刑警支队副支队长，技术大队大队长，负责现场技术分析。"
+        },
+        {
+            "name": "肖小云",
+            "gender": "女",
+            "age": "三十刚出头",
+            "personality": "认真负责，对事件感到复杂",
+            "voice_style": "柔和女声",
+            "description": "东城小学班主任，了解许海和卓佳的过往"
+        },
+        {
+            "name": "肖霄",
+            "gender": "男",
+            "age": "未知",
+            "personality": "随意、洒脱",
+            "voice_style": "活力男声",
+            "description": "酒吧驻唱，与陈菲菲有过短暂互动"
+        },
+        {
+            "name": "胡志刚",
+            "gender": "男",
+            "age": "未知",
+            "personality": "认真、专注、有条理",
+            "voice_style": "沉稳男声",
+            "description": "刑警，参与案件调查，提供狗叫声分析"
+        },
+        {
+            "name": "胡秀",
+            "gender": "女",
+            "age": "未知",
+            "personality": "坚强、感恩",
+            "voice_style": "沉稳女声",
+            "description": "李超的妻子，组织团年饭，感谢战友帮助"
+        },
+        {
+            "name": "苗伟",
+            "gender": "男",
+            "age": "未知",
+            "personality": "好胜、坚定",
+            "voice_style": "沉稳男声",
+            "description": "重案二组组长，主动请缨侦办纵火案"
+        },
+        {
+            "name": "葛向东",
+            "gender": "男",
+            "age": "未知",
+            "personality": "认真、细致、敬业",
+            "voice_style": "沉稳男声",
+            "description": "刑警，擅长画像，参与105专案组工作"
+        },
+        {
+            "name": "蒋帆",
+            "gender": "男",
+            "age": "未知",
+            "personality": "普通、低调",
+            "voice_style": "普通男声",
+            "description": "与汪建国是同学，与案件有联系"
+        },
+        {
+            "name": "蒋帆儿子",
+            "gender": "男",
+            "age": "未知",
+            "personality": "叛逆、情绪化",
+            "voice_style": "少年男声",
+            "description": "蒋帆的儿子，对父亲的叮嘱不以为然"
+        },
+        {
+            "name": "蒋帆母亲",
+            "gender": "女",
+            "age": "未知",
+            "personality": "关心、劝导",
+            "voice_style": "温和女声",
+            "description": "蒋帆的母亲，关心孙子的学习"
+        },
+        {
+            "name": "蒋帆老婆",
+            "gender": "女",
+            "age": "未知",
+            "personality": "唠叨、关心",
+            "voice_style": "温和女声",
+            "description": "蒋帆的妻子，对丈夫的行为有所担忧"
+        },
+        {
+            "name": "蒋超",
+            "gender": "男",
+            "age": "未知",
+            "personality": "疲惫、直言不讳",
+            "voice_style": "低沉男声",
+            "description": "刑警，与胡志刚合作调查，提供线索"
+        },
+        {
+            "name": "袁来安",
+            "gender": "男",
+            "age": "未知",
+            "personality": "认真、专注",
+            "voice_style": "沉稳男声",
+            "description": "刑警，参与调查工作"
+        },
+        {
+            "name": "许大光",
+            "gender": "男",
+            "age": "未知",
+            "personality": "自信、张扬",
+            "voice_style": "低沉男声",
+            "description": "向阳小区团圆宴的捐助者，企业家"
+        },
+        {
+            "name": "许大鹏",
+            "gender": "男",
+            "age": "未知",
+            "personality": "狡诈、机智",
+            "voice_style": "中性男声",
+            "description": "许大光的法律顾问，擅长出谋划策"
+        },
+        {
+            "name": "许崇德",
+            "gender": "男",
+            "age": "七十以上",
+            "personality": "唠叨、年迈、关心孙子",
+            "voice_style": "低沉男声",
+            "description": "许海的爷爷，早晨打扫房间，与孙子有简短对话"
+        },
+        {
+            "name": "许海",
+            "gender": "男",
+            "age": "14",
+            "personality": "冲动、欲望强烈、缺乏自控",
+            "voice_style": "低沉男声",
+            "description": "故事主角，因童年创伤产生心理问题，对杨杜丹丹有强烈欲望并实施侵犯行为"
+        },
+        {
+            "name": "许海爷爷",
+            "gender": "男",
+            "age": "未知",
+            "personality": "蛮横、无理",
+            "voice_style": "低沉男声",
+            "description": "许海的祖父，态度强硬，不讲道理"
+        },
+        {
+            "name": "许老二",
+            "gender": "男",
+            "age": "未知",
+            "personality": "冲动、愤怒",
+            "voice_style": "粗犷男声",
+            "description": "许大光的儿子，参与打架"
+        },
+        {
+            "name": "许老四",
+            "gender": "男",
+            "age": "未知",
+            "personality": "愤怒、不满",
+            "voice_style": "粗犷男声",
+            "description": "许大光的儿子，腿部受伤"
+        },
+        {
+            "name": "谭大国",
+            "gender": "男",
+            "age": "未知",
+            "personality": "认真、细致",
+            "voice_style": "沉稳男声",
+            "description": "警察，发现头颅并打电话给张国强"
+        },
+        {
+            "name": "费韵",
+            "gender": "女",
+            "age": "未知",
+            "personality": "专业、有学识",
+            "voice_style": "沉稳女声",
+            "description": "山南政法心理学教授，为汪欣桐提供心理治疗服务。"
+        },
+        {
+            "name": "辅导员",
+            "gender": "男",
+            "age": "约50岁",
+            "personality": "细心、谨慎",
+            "voice_style": "沉稳男声",
+            "description": "未知"
+        },
+        {
+            "name": "邵萍",
+            "gender": "女",
+            "age": "未知",
+            "personality": "关心丈夫、理性",
+            "voice_style": "温柔女声",
+            "description": "葛向东的妻子，经营餐厅，关注丈夫的变化"
+        },
+        {
+            "name": "郭亮",
+            "gender": "男",
+            "age": "22",
+            "personality": "无所谓、挑衅",
+            "voice_style": "低沉男声",
+            "description": "被怀疑为入室盗窃案嫌疑人"
+        },
+        {
+            "name": "金传统",
+            "gender": "男",
+            "age": "2001年时16岁",
+            "personality": "单恋、富二代、熟悉侯大利",
+            "voice_style": "活力男声",
+            "description": "嫌疑人之一，曾暗恋杨帆，留学归来后在江州做房地产生意"
+        },
+        {
+            "name": "钟明莉",
+            "gender": "女",
+            "age": "53",
+            "personality": "谨慎、紧张、爱聊天",
+            "voice_style": "温和女声",
+            "description": "家政人员，掌握许大光家钥匙，是案件重要证人"
+        },
+        {
+            "name": "钱刚",
+            "gender": "男",
+            "age": "未知",
+            "personality": "冷静、务实",
+            "voice_style": "低沉男声",
+            "description": "派出所副所长，处理杜耀事件，劝解杜耀并参加团年饭"
+        },
+        {
+            "name": "钱所",
+            "gender": "男",
+            "age": "未知",
+            "personality": "未知",
+            "voice_style": "沉稳男声",
+            "description": "与丁大队一同被邀请参加聚餐的警界人士"
+        },
+        {
+            "name": "长贵县民警",
+            "gender": "男",
+            "age": "未知",
+            "personality": "强壮、自信",
+            "voice_style": "活力男声",
+            "description": "来自长贵县的民警，部队转业干部，体力强，信心足。"
+        },
+        {
+            "name": "门卫",
+            "gender": "男",
+            "age": "未知",
+            "personality": "健谈，提供关键信息",
+            "voice_style": "中年男声",
+            "description": "未知"
+        },
+        {
+            "name": "附中校长",
+            "gender": "男",
+            "age": "未知",
+            "personality": "强硬、固执",
+            "voice_style": "严厉男声",
+            "description": "附属中学校长，强烈反对许海回校"
+        },
+        {
+            "name": "陈义明",
+            "gender": "男",
+            "age": "未知",
+            "personality": "轻浮、不尊重他人",
+            "voice_style": "粗犷男声",
+            "description": "陈菲菲的继父，言语轻浮，对女儿的遭遇漠不关心"
+        },
+        {
+            "name": "陈义明的父母",
+            "gender": "未知",
+            "age": "已故",
+            "personality": "未知",
+            "voice_style": "未知",
+            "description": "已去世"
+        },
+        {
+            "name": "陈正淑",
+            "gender": "女",
+            "age": "未知",
+            "personality": "担忧、细心",
+            "voice_style": "温和女声",
+            "description": "汪欣桐的奶奶，陪伴老伴寻找孙女"
+        },
+        {
+            "name": "陈浩荡",
+            "gender": "男",
+            "age": "未知",
+            "personality": "幽默、随和",
+            "voice_style": "活力男声",
+            "description": "刑警，参与聚会，调侃林海军不谈案子"
+        },
+        {
+            "name": "陈老师",
+            "gender": "未知",
+            "age": "未知",
+            "personality": "尽职、守责",
+            "voice_style": "沉稳男声",
+            "description": "山南政法学院心理实验室工作人员，负责看管实验室。"
+        },
+        {
+            "name": "陈菲菲",
+            "gender": "女",
+            "age": "17-18",
+            "personality": "机智、隐忍、坚强",
+            "voice_style": "软糯女声",
+            "description": "被许海袭击的年轻女子，社会经验丰富，装昏迷以保全自己"
+        },
+        {
+            "name": "陈阳",
+            "gender": "男",
+            "age": "未知",
+            "personality": "谨慎、务实",
+            "voice_style": "沉稳男声",
+            "description": "常务副支队长，对侯大利的安排有所顾虑但最终同意"
+        },
+        {
+            "name": "韩小涵",
+            "gender": "女",
+            "age": "未知",
+            "personality": "撒娇、热情、性感",
+            "voice_style": "软糯女声",
+            "description": "许大光的情人，性格活泼，常与许大光亲热，称二人互动为‘杀威炮’"
+        },
+        {
+            "name": "顾主任",
+            "gender": "男",
+            "age": "未知",
+            "personality": "严肃、权威",
+            "voice_style": "沉稳男声",
+            "description": "江州市公安局政治部主任，组织训前动员会"
+        },
+        {
+            "name": "顾姐",
+            "gender": "女",
+            "age": "未知",
+            "personality": "专业、热情、细致",
+            "voice_style": "温和女声",
+            "description": "美发室老板，为宁凌提供服务，接待客人"
+        },
+        {
+            "name": "顾英",
+            "gender": "女",
+            "age": "未知",
+            "personality": "谨慎、负责",
+            "voice_style": "沉稳女声",
+            "description": "在江州大酒店工作，通报信息给侯大利"
+        },
+        {
+            "name": "马兵",
+            "gender": "男",
+            "age": "未知",
+            "personality": "专业、敬业",
+            "voice_style": "低沉男声",
+            "description": "二中队民警，参与团年饭"
+        },
+        {
+            "name": "马小兵",
+            "gender": "男",
+            "age": "未知",
+            "personality": "尽责、配合",
+            "voice_style": "沉稳男声",
+            "description": "协助布置警戒带，维持现场秩序"
+        },
+        {
+            "name": "高个子",
+            "gender": "男",
+            "age": "未知",
+            "personality": "暴躁、不服气",
+            "voice_style": "粗犷男声",
+            "description": "被警方制服的逃犯，身带仿制手枪，试图反抗但失败"
+        },
+        {
+            "name": "高连",
+            "gender": "男",
+            "age": "未知",
+            "personality": "认真、细致",
+            "voice_style": "沉稳男声",
+            "description": "警察，提供新线索"
+        },
+        {
+            "name": "黄大森",
+            "gender": "男",
+            "age": "未知",
+            "personality": "未知",
+            "voice_style": "普通男声",
+            "description": "未知"
+        },
+        {
+            "name": "黄小军",
+            "gender": "男",
+            "age": "未知",
+            "personality": "积极、有志向",
+            "voice_style": "活力男声",
+            "description": "在厨房帮忙的年轻人，打算成为刑警"
+        }
+    ],
+    "chattts_voice_map": {
+        "丁大队": "neutral",
+        "丁浩": "neutral",
+        "三轮车主人": "neutral",
+        "严峰": "neutral",
+        "中年女人": "neutral",
+        "中年女收费员": "female_energetic",
+        "中年妇女": "neutral",
+        "乔亚楠": "neutral",
+        "伍强": "neutral",
+        "何勇": "male_calm",
+        "侯国龙": "male_calm",
+        "侯大利": "male_calm",
+        "保卫科长": "neutral",
+        "关鹏": "neutral",
+        "刘战刚": "neutral",
+        "刘清秀": "neutral",
+        "刘真": "neutral",
+        "办案民警": "neutral",
+        "卓佳": "neutral",
+        "卓佳奶奶": "neutral",
+        "卓佳爷爷": "male_calm",
+        "卓佳的外公": "neutral",
+        "卓佳的外婆": "neutral",
+        "卓佳的爷爷": "neutral",
+        "卓越": "neutral",
+        "吴新生": "neutral",
+        "吴炯": "male_calm",
+        "吴青": "neutral",
+        "周向阳": "neutral",
+        "周涛": "male_energetic",
+        "夏晓宇": "neutral",
+        "女子（技师）": "neutral",
+        "宁凌": "neutral",
+        "宫建民": "male_calm",
+        "宾格": "neutral",
+        "封长胜": "neutral",
+        "小林": "neutral",
+        "小男孩": "neutral",
+        "小舒": "neutral",
+        "少年人": "neutral",
+        "居委会主任": "female_calm",
+        "市局领导": "neutral",
+        "年轻女子": "female_energetic",
+        "张佳洪": "neutral",
+        "张勤": "neutral",
+        "张国强": "neutral",
+        "张小伙": "neutral",
+        "张小天": "female_energetic",
+        "张小舒": "neutral",
+        "张晨": "neutral",
+        "张红": "neutral",
+        "情侣": "neutral",
+        "成红梅": "neutral",
+        "戴帽男子": "male_calm",
+        "所长": "neutral",
+        "接待人员": "neutral",
+        "摩托车手": "neutral",
+        "易思华": "male_energetic",
+        "普阳": "neutral",
+        "朱朱": "neutral",
+        "朱林": "neutral",
+        "朱燕": "female_calm",
+        "朱燕的父母": "neutral",
+        "朱琪": "female_calm",
+        "李主任": "neutral",
+        "李友青": "neutral",
+        "李小峰": "neutral",
+        "李明": "neutral",
+        "李晖": "neutral",
+        "李永梅": "neutral",
+        "李琴": "female_calm",
+        "李秋": "male_energetic",
+        "李超": "male_calm",
+        "李阳": "neutral",
+        "杜家贵": "neutral",
+        "杜峰": "neutral",
+        "杜文丽": "neutral",
+        "杜耀": "male_calm",
+        "杨主任": "neutral",
+        "杨国雄": "neutral",
+        "杨帆": "neutral",
+        "杨智": "neutral",
+        "杨智的父母": "neutral",
+        "杨杜丹丹": "female_energetic",
+        "杨杜丹丹的外公": "neutral",
+        "杨永福": "male_calm",
+        "杨浩": "neutral",
+        "杨英": "female_calm",
+        "林海军": "male_calm",
+        "林红": "neutral",
+        "林风": "male_calm",
+        "柳江河": "neutral",
+        "梁艳": "female_calm",
+        "樊勇": "male_calm",
+        "欣桐": 2,
+        "段家秀": "neutral",
+        "江克扬": "neutral",
+        "江克杨": "neutral",
+        "江站长": "neutral",
+        "江阳区副区长": "neutral",
+        "汤柳": "female_calm",
+        "汪建国": "male_calm",
+        "汪欣桐": "neutral",
+        "汪远铭": "neutral",
+        "洪金明": "neutral",
+        "涂山": "neutral",
+        "滕鹏飞": "neutral",
+        "滕麻子": "male_calm",
+        "物管人员": "neutral",
+        "王刚": "neutral",
+        "王华": "male_calm",
+        "王永强": "male_calm",
+        "王芳": "neutral",
+        "田甜": "neutral",
+        "男友": "male_energetic",
+        "秦勇": "neutral",
+        "秦风": "male_energetic",
+        "管理员": "neutral",
+        "罗志刚": "neutral",
+        "老伍": "male_calm",
+        "老公安": "male_calm",
+        "老姜局长": "neutral",
+        "老张": "male_calm",
+        "老朴": "male_calm",
+        "老蒋": "neutral",
+        "老谭": "neutral",
+        "肖小云": "neutral",
+        "肖霄": "male_energetic",
+        "胡志刚": "neutral",
+        "胡秀": "female_calm",
+        "苗伟": "neutral",
+        "葛向东": "neutral",
+        "蒋帆": "neutral",
+        "蒋帆儿子": "neutral",
+        "蒋帆母亲": "neutral",
+        "蒋帆老婆": "neutral",
+        "蒋超": "male_calm",
+        "袁来安": "neutral",
+        "许大光": "male_calm",
+        "许大鹏": "neutral",
+        "许崇德": "male_calm",
+        "许海": "male_calm",
+        "许海爷爷": "male_calm",
+        "许老二": "neutral",
+        "许老四": "neutral",
+        "谭大国": "neutral",
+        "费韵": "female_calm",
+        "辅导员": "neutral",
+        "邵萍": "neutral",
+        "郭亮": "male_calm",
+        "金传统": "male_energetic",
+        "钟明莉": "neutral",
+        "钱刚": "male_calm",
+        "钱所": "neutral",
+        "长贵县民警": "male_energetic",
+        "门卫": "neutral",
+        "附中校长": "neutral",
+        "陈义明": "neutral",
+        "陈义明的父母": "neutral",
+        "陈正淑": "neutral",
+        "陈浩荡": "male_energetic",
+        "陈老师": "neutral",
+        "陈菲菲": "neutral",
+        "陈阳": "neutral",
+        "韩小涵": "neutral",
+        "顾主任": "neutral",
+        "顾姐": "neutral",
+        "顾英": "female_calm",
+        "马兵": "male_calm",
+        "马小兵": "neutral",
+        "高个子": "neutral",
+        "高连": "neutral",
+        "黄大森": "neutral",
+        "黄小军": "male_energetic"
+    },
+    "total_roles": 174
+}

@@ -10,7 +10,7 @@ from tools_call_qianwen import call_qianwen_api_via_requests
 QWEN_API_KEY = "sk-c9a4649744f246f0877675c62ec3b9f1"
 # 小说文本路径（推荐使用绝对路径，例如 "/Users/apple/Dev/Code/novel_10k.txt"）
 # NOVEL_TXT_PATH = "/Users/apple/Dev/Code/generate_voice_by_llm/novel_10k.txt"  # mac电脑的环境
-NOVEL_TXT_PATH = r"D:\code\generate_voice_by_llm\novel_10k.txt"  # window电脑的环境
+NOVEL_TXT_PATH = r"D:\Python\code\generate_voice_by_llm\novel_10k.txt"  # window电脑的环境
 
 # 输出角色档案的JSON路径
 OUTPUT_JSON_PATH = "./novel_roles.json"
@@ -83,6 +83,8 @@ def split_long_text(text: str, chunk_size: int = 2000) -> List[str]:
 #         return result["output"]["choices"][0]["message"]["content"]
 #     except Exception as e:
 #         raise Exception(f"调用千问API失败：{str(e)}")
+
+
 
 def extract_roles_from_chunk(chunk_text: str, api_key: str) -> List[Dict[str, Any]]:
     """从单段文本中提取角色信息"""
@@ -192,10 +194,44 @@ def main():
         # 2. 逐段提取角色信息
         print("Step 3: 调用千问API提取角色信息...")
         all_role_chunks = []
+        successful_chunks = 0
+        failed_chunks = 0
+
         for i, chunk in enumerate(text_chunks, 1):
             print(f"  处理第 {i}/{len(text_chunks)} 段...")
-            roles = extract_roles_from_chunk(chunk, QWEN_API_KEY)
-            all_role_chunks.append(roles)
+            try:
+                roles = extract_roles_from_chunk(chunk, QWEN_API_KEY)
+                if roles:  # 如果有提取到角色
+                    all_role_chunks.append(roles)
+                    successful_chunks += 1
+                    print(f"    ✅ 成功提取 {len(roles)} 个角色")
+                else:
+                    all_role_chunks.append([])
+                    print(f"    ⚠️  未提取到角色")
+                    
+            except Exception as e:
+                error_msg = str(e)
+                
+                # 检查是否是内容审核错误
+                if "inappropriate content" in error_msg or "For details, see: https://help.aliyun.com/zh/model-studio/error-code#inappropriate-content" in error_msg:
+                    print(f"    ⚠️  第{i}段触发内容安全审核，已跳过")
+                    all_role_chunks.append([])  # 添加空列表保持索引一致
+                    failed_chunks += 1
+                    
+                    # 可选：记录被跳过的段落信息到日志文件
+                    with open("skipped_chunks.log", "a", encoding="utf-8") as log_file:
+                        log_file.write(f"=== 跳过的段落 {i} ===\n")
+                        log_file.write(f"字符数: {len(chunk)}\n")
+                        log_file.write(f"前200字符: {chunk[:200]}...\n")
+                        log_file.write(f"错误信息: {error_msg}\n")
+                        log_file.write("="*50 + "\n")
+                        
+                else:
+                    # 如果是其他错误，重新抛出
+                    print(f"    ❌ 第{i}段处理失败（非内容审核错误）: {error_msg}")
+                    raise e  # 重新抛出其他异常
+
+        print(f"\n段落处理完成：成功 {successful_chunks} 段，跳过 {failed_chunks} 段（因内容审核）")
 
         # 3. 合并角色信息
         print("Step 4: 合并角色信息（去重）...")
