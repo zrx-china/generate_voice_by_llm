@@ -3,7 +3,7 @@ import json
 import os
 from typing import List, Dict
 
-def preprocess_novel_text(raw_text: str, api_key: str) -> List[Dict]:
+def preprocess_novel_text(raw_text: str, api_key: str,novel_roles_path: str) -> List[Dict]:
     """
     调用大模型预处理小说文本，返回结构化的角色/情感/语速标注数据
     
@@ -14,8 +14,13 @@ def preprocess_novel_text(raw_text: str, api_key: str) -> List[Dict]:
     Returns:
         结构化列表，每个元素包含text/speaker/emotion/speed
     """
+    with open(novel_roles_path, "r", encoding="utf-8") as f:
+        role_data = json.load(f)
+    # role_prompt = role_data["roles"]
+
     # 1. 构造大模型提示词
     prompt = f"""
+    {role_data}
     请严格按照以下要求处理小说文本，仅输出JSON格式结果（不要额外解释）：
     1. 文本清洗：去除无关空格/重复标点，保留完整语义；
     2. 分段断句：按自然语义拆分，每段不超过200字；
@@ -149,7 +154,8 @@ def read_novel_from_txt(file_path: str, encoding: str = "utf-8") -> str:
 if __name__ == "__main__":
     # 1. 配置参数
     MY_API_KEY = "sk-c9a4649744f246f0877675c62ec3b9f1"  # 替换为你的通义千问API Key
-    NOVEL_TXT_PATH = "./novel_sample.txt"  # 小说TXT文件路径（相对/绝对路径）
+    NOVEL_TXT_PATH = "/Users/apple/Dev/Code/generate_voice_by_llm/novel_sample.txt"  # mac电脑的环境
+    NOVEL_ROLES_PATH = "/Users/apple/Dev/Code/generate_voice_by_llm/novel_roles.json"  # mac电脑的环境
     
     try:
         # 2. 从TXT文件读取小说文本
@@ -179,7 +185,7 @@ if __name__ == "__main__":
         all_processed_segments = []
         for i, chunk in enumerate(text_chunks, 1):
             print(f"\n正在预处理第{i}个文本块...")
-            processed_chunk = preprocess_novel_text(chunk, MY_API_KEY)
+            processed_chunk = preprocess_novel_text(chunk, MY_API_KEY,NOVEL_ROLES_PATH)
             all_processed_segments.extend(processed_chunk)
 
         # 5. 打印预处理结果
