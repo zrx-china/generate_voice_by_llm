@@ -41,7 +41,7 @@ def call_qianwen_api_via_requests(api_key: str, model: str, prompt: str) -> str:
     
     try:
         # 发送请求，设置合理超时
-        response = requests.post(url, headers=headers, json=payload, timeout=30)
+        response = requests.post(url, headers=headers, json=payload, timeout=60)
         response.raise_for_status()  # 检查HTTP状态码
         
         # 解析响应

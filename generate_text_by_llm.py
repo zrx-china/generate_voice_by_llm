@@ -3,6 +3,13 @@ import json
 import os
 from typing import List, Dict
 
+from tools_call_qianwen import call_qianwen_api_via_requests
+
+
+
+MODEL_NAME = "qwen-turbo"  # 或 'qwen-plus', 'qwen-max' 等
+
+
 def preprocess_novel_text(raw_text: str, api_key: str,novel_roles_path: str) -> List[Dict]:
     """
     调用大模型预处理小说文本，返回结构化的角色/情感/语速标注数据
@@ -47,79 +54,74 @@ def preprocess_novel_text(raw_text: str, api_key: str,novel_roles_path: str) -> 
         }}
     ]
     """
-
     # 2. 调用通义千问API
-    url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation"
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json"
-    }
-    payload = {
-        "model": "qwen-turbo",  # 轻量版，速度快、成本低
-        "input": {
-            "messages": [
-                {"role": "user", "content": prompt}
-            ]
-        },
-        "parameters": {
-            "result_format": "text",
-            "temperature": 0.1,  # 降低随机性，保证输出格式稳定
-            "top_p": 0.9
-        }
-    }
+    raw_output = call_qianwen_api_via_requests(api_key, MODEL_NAME, prompt)
+    # 清洗输出（去除可能的markdown代码块、多余文字）
+    raw_output = raw_output.strip().replace("```json", "").replace("```", "").replace("\\n", "")
+    return raw_output
 
-    try:
-        # 发送请求
-        response = requests.post(url, headers=headers, json=payload, timeout=30)
-        response.raise_for_status()  # 抛出HTTP错误
-        result = response.json()
+    # # 2. 调用通义千问API
+    # url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation"
+    # headers = {
+    #     "Authorization": f"Bearer {api_key}",
+    #     "Content-Type": "application/json"
+    # }
+    # payload = {
+    #     "model": "qwen-turbo",  # 轻量版，速度快、成本低
+    #     "input": {
+    #         "messages": [
+    #             {"role": "user", "content": prompt}
+    #         ]
+    #     },
+    #     "parameters": {
+    #         "result_format": "text",
+    #         "temperature": 0.1,  # 降低随机性，保证输出格式稳定
+    #         "top_p": 0.9
+    #     }
+    # }
 
-        # 关键修改：用json.dumps格式化输出，indent=4表示缩进4个空格，ensure_ascii=False显示中文
-        formatted_payload = json.dumps(
-            payload,
-            indent=4,        # 缩进4个空格，层级清晰
-            ensure_ascii=False,  # 保留中文，不转义
-            sort_keys=False   # 不打乱原有字段顺序
-        )
+    # try:
+    #     # 发送请求
+    #     response = requests.post(url, headers=headers, json=payload, timeout=30)
+    #     response.raise_for_status()  # 抛出HTTP错误
+    #     result = response.json()
 
-        print(f"--1--原始文本：\n{formatted_payload}")
+    #     # 关键修改：用json.dumps格式化输出，indent=4表示缩进4个空格，ensure_ascii=False显示中文
+    #     formatted_payload = json.dumps(
+    #         payload,
+    #         indent=4,        # 缩进4个空格，层级清晰
+    #         ensure_ascii=False,  # 保留中文，不转义
+    #         sort_keys=False   # 不打乱原有字段顺序
+    #     )
+
+    #     print(f"--1--原始文本：\n{formatted_payload}")
         
-        # 关键步骤：解析output.text中的JSON字符串为Python列表
-        if "output" in result and "text" in result["output"]:
-            # 把带转义符的字符串转成真正的列表
-            text_data = json.loads(result["output"]["text"])
-            # 替换原字段，用解析后的列表替代字符串
-            result["output"]["text"] = text_data
-        # 关键修改：用json.dumps格式化输出，indent=4表示缩进4个空格，ensure_ascii=False显示中文
-        formatted_result = json.dumps(
-            result,
-            indent=4,        # 缩进4个空格，层级清晰
-            ensure_ascii=False,  # 保留中文，不转义
-            sort_keys=False   # 不打乱原有字段顺序
-        )
-        print(f"--2--阿里大模型反馈的结果：\n{formatted_result}")
-        # 3. 解析返回结果
-        raw_output = result["output"]["text"]
-        print(f"--3--变量类型：{type(raw_output)}")
-        # 清洗可能的多余字符（如markdown代码块标记）
-        # raw_output = raw_output.strip().replace("```json", "").replace("```", "")
-        # processed_data = json.loads(raw_output)  # 转为JSON对象
+    #     # 关键步骤：解析output.text中的JSON字符串为Python列表
+    #     if "output" in result and "text" in result["output"]:
+    #         # 把带转义符的字符串转成真正的列表
+    #         text_data = json.loads(result["output"]["text"])
+    #         # 替换原字段，用解析后的列表替代字符串
+    #         result["output"]["text"] = text_data
+    #     # 关键修改：用json.dumps格式化输出，indent=4表示缩进4个空格，ensure_ascii=False显示中文
+    #     formatted_result = json.dumps(
+    #         result,
+    #         indent=4,        # 缩进4个空格，层级清晰
+    #         ensure_ascii=False,  # 保留中文，不转义
+    #         sort_keys=False   # 不打乱原有字段顺序
+    #     )
+    #     print(f"--2--阿里大模型反馈的结果：\n{formatted_result}")
+    #     # 3. 解析返回结果
+    #     raw_output = result["output"]["text"]
+    #     print(f"--3--变量类型：{type(raw_output)}")
 
-        # 兜底处理：校验情感值，非指定值转为neutral
-        # valid_emotions = ["neutral", "happy", "sad", "angry", "calm", "surprised"]
-        # for seg in processed_data:
-        #     seg["emotion"] = seg["emotion"] if seg["emotion"] in valid_emotions else "neutral"
-        #     # 校验语速值，超出范围则修正
-        #     seg["speed"] = max(0.8, min(1.2, seg["speed"]))
+    #     return raw_output
 
-        return raw_output
-
-    except requests.exceptions.RequestException as e:
-        raise Exception(f"API调用失败：{str(e)}")
-    except json.JSONDecodeError as e:
-        raise Exception(f"大模型输出格式错误，原始输出：{raw_output}，错误：{str(e)}")
-    except KeyError as e:
-        raise Exception(f"API返回字段缺失：{str(e)}，原始返回：{result}")
+    # except requests.exceptions.RequestException as e:
+    #     raise Exception(f"API调用失败：{str(e)}")
+    # except json.JSONDecodeError as e:
+    #     raise Exception(f"大模型输出格式错误，原始输出：{raw_output}，错误：{str(e)}")
+    # except KeyError as e:
+    #     raise Exception(f"API返回字段缺失：{str(e)}，原始返回：{result}")
 
 def read_novel_from_txt(file_path: str, encoding: str = "utf-8") -> str:
     """
@@ -164,7 +166,7 @@ if __name__ == "__main__":
         print(f"文件读取完成，文本长度：{len(novel_raw_text)} 字符")
 
         # 3. （可选）长文本拆分：通义千问turbo单轮最大支持8k字符，超过则按章节拆分
-        max_text_length = 8000
+        max_text_length = 2000
         if len(novel_raw_text) > max_text_length:
             print("检测到长文本，自动拆分处理...")
             # 按章节/换行拆分（简单拆分逻辑，可根据小说格式优化）

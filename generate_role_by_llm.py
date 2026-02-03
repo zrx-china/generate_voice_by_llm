@@ -56,34 +56,6 @@ def split_long_text(text: str, chunk_size: int = 2000) -> List[str]:
         start = end
     return chunks
 
-# def call_qwen_api(prompt: str, api_key: str) -> str:
-#     """调用通义千问API（qwen-turbo，适配长文本解析）"""
-#     url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation"
-#     headers = {
-#         "Authorization": f"Bearer {api_key}",
-#         "Content-Type": "application/json"
-#     }
-#     payload = {
-#         "model": "qwen-turbo",  # 轻量版，速度快，支持8k上下文
-#         "input": {
-#             "messages": [
-#                 {"role": "user", "content": prompt}
-#             ]
-#         },
-#         "parameters": {
-#             "temperature": 0.1,  # 降低随机性，保证输出格式稳定
-#             "top_p": 0.9,
-#             "result_format": "text"
-#         }
-#     }
-#     try:
-#         response = requests.post(url, headers=headers, json=payload, timeout=60)
-#         response.raise_for_status()
-#         result = response.json()
-#         return result["output"]["choices"][0]["message"]["content"]
-#     except Exception as e:
-#         raise Exception(f"调用千问API失败：{str(e)}")
-
 
 
 def extract_roles_from_chunk(chunk_text: str, api_key: str) -> List[Dict[str, Any]]:
