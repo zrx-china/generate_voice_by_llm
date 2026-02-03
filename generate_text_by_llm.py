@@ -58,8 +58,25 @@ def preprocess_novel_text(raw_text: str, api_key: str,novel_roles_path: str) -> 
     raw_output = call_qianwen_api_via_requests(api_key, MODEL_NAME, prompt)
     # 清洗输出（去除可能的markdown代码块、多余文字）
     raw_output = raw_output.strip().replace("```json", "").replace("```", "").replace("\\n", "")
-    return raw_output
+    # return raw_output
 
+    # ========== 关键修复：把JSON字符串解析成字典列表 ==========
+    try:
+        processed_data = json.loads(raw_output)  # 解析为列表/字典
+        # 校验解析结果是否为列表（确保格式符合要求）
+        if not isinstance(processed_data, list):
+            raise ValueError(f"大模型输出不是列表格式，原始输出：{raw_output}")
+        # 校验每个元素是否为字典，且包含必要字段
+        required_fields = ["text", "speaker", "emotion", "speed"]
+        for item in processed_data:
+            if not isinstance(item, dict):
+                raise ValueError(f"片段不是字典：{item}")
+            for field in required_fields:
+                if field not in item:
+                    raise ValueError(f"缺失必要字段{field}：{item}")
+        return processed_data  # 返回解析后的字典列表
+    except json.JSONDecodeError as e:
+        raise Exception(f"大模型输出不是合法JSON，原始输出：{raw_output}，错误：{e}")
     # # 2. 调用通义千问API
     # url = "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation"
     # headers = {
@@ -158,6 +175,7 @@ if __name__ == "__main__":
     MY_API_KEY = "sk-c9a4649744f246f0877675c62ec3b9f1"  # 替换为你的通义千问API Key
     NOVEL_TXT_PATH = "/Users/apple/Dev/Code/generate_voice_by_llm/novel_sample.txt"  # mac电脑的环境
     NOVEL_ROLES_PATH = "/Users/apple/Dev/Code/generate_voice_by_llm/novel_roles.json"  # mac电脑的环境
+    NOVEL_PROCESSED_PATH= "/Users/apple/Dev/Code/generate_voice_by_llm/novel_processed.json" # mac电脑的环境
     
     try:
         # 2. 从TXT文件读取小说文本
@@ -200,9 +218,9 @@ if __name__ == "__main__":
             print(f"语速：{seg['speed']}")
 
         # （可选）将预处理结果保存为JSON文件
-        with open("./novel_processed.json", "w", encoding="utf-8") as f:
+        with open(NOVEL_PROCESSED_PATH, "w", encoding="utf-8") as f:
             json.dump(all_processed_segments, f, ensure_ascii=False, indent=4)
-        print("\n预处理结果已保存至：./novel_processed.json")
+        print(f"\n预处理结果已保存至：{NOVEL_PROCESSED_PATH}")
 
     except Exception as e:
         print(f"处理失败：{str(e)}")

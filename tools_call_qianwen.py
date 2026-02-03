@@ -50,11 +50,18 @@ def call_qianwen_api_via_requests(api_key: str, model: str, prompt: str) -> str:
         # 打印完整响应结构以便调试
         print("完整的API响应结构：")
         print(json.dumps(resp_json, ensure_ascii=False, indent=2))
+        # 打印接口的类型与内容
+        print("完打印接口的类型与内容1：")
+        print(f"resp_json类型：{type(resp_json)}，内容：{resp_json}")
+        
         
         # 关键：根据不同的result_format提取结果
         if resp_json.get("output"):
             output = resp_json["output"]
             
+            # 打印接口的类型与内容
+            print("完打印接口的类型与内容1：")
+            print(f"output类型：{type(output)}，内容：{output}")
             # 方式1: result_format为"text"时的解析 (你的代码原有方式)
             if "text" in output and output["text"]:
                 return output["text"]
