@@ -1,13 +1,24 @@
 import json
 import os
+os.environ['CURL_IPV4'] = '1'
+os.environ['HF_HUB_DISABLE_IPV6'] = '1'
+
 import torch
 import ChatTTS
 from pydub import AudioSegment
 from typing import List, Dict
 
+
+
+# ========== 新增：自动切换到脚本所在目录 ==========
+script_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(script_dir)
+print(f"工作目录已切换到：{os.getcwd()}")
+
+
 # 初始化ChatTTS模型
 chat = ChatTTS.Chat()
-chat.load_models()  # 自动下载并加载模型，首次运行需联网
+chat.load(compile=False, source='local')  # 自动下载并加载模型，首次运行需联网，source=‘local’，强制使用本地已存在的文件
 
 
 def get_chattts_speaker_params(emotion: str, speed: float) -> Dict:
